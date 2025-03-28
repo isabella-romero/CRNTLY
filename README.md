@@ -1,11 +1,11 @@
-#🌐 CRNTLY
+# 🌐 CRNTLY
 CRNTLY is a minimalist social media platform where users share thoughts, updates, or insights in 30 words or less. No reposts. No suggested users. No algorithms. Just real words from people you choose to connect with.
 
-#✨ Live App
+# ✨ Live App
 🔗 Deployed Application on Render
 🔗 GitHub Repository
 
-#📖 Table of Contents
+# 📖 Table of Contents
 Concept
 
 Technologies Used
@@ -22,7 +22,7 @@ Future Development
 
 License
 
-#💡 Concept
+# 💡 Concept
 User Story:
 
 As a young adult looking for a more meaningful social media experience, I want a platform where I can share short thoughts and connect with people intentionally—free from algorithm-driven feeds and repost culture.
@@ -30,7 +30,7 @@ As a young adult looking for a more meaningful social media experience, I want a
 Motivation:
 Modern social media has become overwhelming, repetitive, and driven by trends. CRNTLY offers a stripped-down, authentic platform where people connect with real posts, not popularity metrics.
 
-#🛠️ Technologies Used
+# 🛠️ Technologies Used
 Front End
 React
 
@@ -58,7 +58,7 @@ MongoDB Atlas
 
 Render (Fullstack deployment)
 
-#🌟 Features
+# 🌟 Features
 ✍️ Create posts in 30 words or less
 
 🔒 User authentication with JWT
@@ -71,7 +71,7 @@ Render (Fullstack deployment)
 
 📱 Fully responsive, clean and polished UI
 
-#🖼️ Screenshots
+# 🖼️ Screenshots
 Add a few screenshots here after MVP is built.
 Example: Home page, Create Post form, User profile view, Mobile layout.
 
@@ -105,7 +105,7 @@ Copy
 Edit
 npm run develop
 
-#🚀 Usage
+# 🚀 Usage
 Sign up or log in
 
 Look up users by exact username
@@ -116,7 +116,7 @@ Like or comment on posts
 
 Experience a social platform free from noise and algorithms
 
-#🛠️ Future Development
+# 🛠️ Future Development
 🌓 Dark mode toggle
 
 🗓️ Post scheduling
@@ -127,5 +127,5 @@ Experience a social platform free from noise and algorithms
 
 📱 PWA support for mobile experience
 
-#🧾 License
+# 🧾 License
 This project is licensed under the MIT License.
