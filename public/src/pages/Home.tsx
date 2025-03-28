@@ -1,0 +1,1 @@
+// home page where it displays the user's following's posts
