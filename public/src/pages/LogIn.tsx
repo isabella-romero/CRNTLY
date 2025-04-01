@@ -18,7 +18,7 @@ const Login = () => {
       [name]: value,
     });
   };
-};
+
 
   const handleFormSubmit = async (event: FormEvent) => {
     event.preventDefault();
@@ -38,3 +38,38 @@ const Login = () => {
       password: '',
     });
   };
+
+  return (
+    <div>
+      <h2>Login to your Account</h2>
+      <form onSubmit={handleFormSubmit}>
+        <div>
+          <label>
+            Username:
+            <input
+              type="text"
+              name="username"
+              value={formState.username}
+              onChange={handleChange}
+              required
+            />
+          </label>
+        </div>
+        <div>
+          <label>
+            Password:
+            <input
+              type="password"
+              name="password"
+              value={formState.password}
+              onChange={handleChange}
+              required
+            />
+          </label>
+        </div>
+        <button type="submit">Login</button>
+        {error && <p style={{ color: 'red' }}>Login failed. Please try again.</p>}
+      </form>
+    </div>
+  );
+};
