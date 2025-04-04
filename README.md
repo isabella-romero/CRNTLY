@@ -2,7 +2,7 @@
 CRNTLY is a minimalist social media platform where users share thoughts, updates, or insights in 30 words or less. No reposts. No suggested users. No algorithms. Just real words from people you choose to connect with.
 
 # ✨ Live App
-🔗 Deployed Application on Render
+🔗 Deployed Application on Render: https://project-3-zh4t.onrender.com
 🔗 GitHub Repository
 
 # 📖 Table of Contents
