@@ -1,12 +1,21 @@
 import React, { useState, FormEvent, ChangeEvent } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { register } from '../api/authAPI';
+import { useMutation } from '@apollo/client';
+import { gql } from '@apollo/client';
+import Auth from '../utils/auth'; // Adjusted the path to match the correct location
+
+const REGISTER_USER = gql`
+  mutation RegisterUser($username: String!, $password: String!) {
+    register(username: $username, password: $password) {
+      token
+    }
+  }
+`;
 
 // registering credentials
 // should take user to this page when they press "register", and successfully filled in the credentials
 // handles the registration process
 const Register: React.FC = () => {
-    const [formState, setFormState] = useState({ username: '', password: '' });
+    const [formState, setFormState] = useState({ firstName: '', lastName: '', username: '', password: '', confirmPassword: '' });
     const [register, { error, data }] = useMutation(REGISTER_USER);
 
     const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -22,30 +31,36 @@ const Register: React.FC = () => {
         event.preventDefault();
         console.log(formState);
         try {
-          const { data } = await register({
-            variables: { ...formState },
-          });
+            const { data } = await register({
+                variables: { 
+                    username: formState.username, 
+                    password: formState.password 
+                },
+            });
     
-          Auth.register(data.register.token);
+            Auth.register(data.register.token, formState.password);
         } catch (e) {
-          console.error(e);
+            console.error(e);
         }
     
         setFormState({
-          username: '',
-          password: '',
+            firstName: '',
+            lastName: '',
+            username: '',
+            password: '',
+            confirmPassword: '',
         });
-      };
+    };
     return (
       <div>
         <h2>Join CRNTLY</h2>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleFormSubmit}>
           <div>
             <label>First Name:</label>
             <input
               type="text"
               name="firstName"
-              value={registerData.firstName}
+              value={formState.firstName}
               onChange={handleChange}
               required
             />
@@ -55,7 +70,7 @@ const Register: React.FC = () => {
             <input
               type="text"
               name="lastName"
-              value={registerData.lastName}
+              value={formState.lastName}
               onChange={handleChange}
               required
             />
@@ -65,7 +80,7 @@ const Register: React.FC = () => {
             <input
               type="text"
               name="username"
-              value={registerData.username}
+              value={formState.username}
               onChange={handleChange}
               required
             />
@@ -75,7 +90,7 @@ const Register: React.FC = () => {
             <input
               type="password"
               name="password"
-              value={registerData.password}
+              value={formState.password}
               onChange={handleChange}
               required
             />
@@ -85,19 +100,16 @@ const Register: React.FC = () => {
             <input
               type="password"
               name="confirmPassword"
-              value={registerData.confirmPassword}
+              value={formState.confirmPassword}
               onChange={handleChange}
               required
             />
           </div>
-          {error && <p style={{ color: 'red' }}>{error}</p>}
+          {error && <p style={{ color: 'red' }}>{error.message}</p>}
           <button type="submit">Register</button>
         </form>
       </div>
     );
   };
-};
-  
-  export default Register;
 
-  
+export default Register;

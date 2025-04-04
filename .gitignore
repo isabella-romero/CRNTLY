@@ -16,9 +16,6 @@
 # Mono auto generated files
 mono_crash.*
 
-# Editor directories and files
-.env
-
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
@@ -401,3 +398,9 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+#mckenzie Test files 
+index.html
+login.html
+profile.html
+signin.html
