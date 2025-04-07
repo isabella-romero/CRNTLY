@@ -14,6 +14,11 @@ const LandingPage: React.FC = () => {
 
     return (
         <div>
+            <div>
+        <img
+          src="/path/to/your/image.jpg" // Replace with the actual path to your image
+          alt="App Logo"
+        />
           <h1>Welcome to CRNTLY</h1>
           <p>'Short Bio on how our app works'</p>
           <div>
