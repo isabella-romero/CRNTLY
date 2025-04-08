@@ -95,7 +95,6 @@ const Register: React.FC = () => {
         </form>
       </div>
     );
-  };
 };
   
   export default Register;
