@@ -1,0 +1,79 @@
+{
+ 
+
+    "name": "CRNTLY",
+   
+  
+    "version": "1.0.0",
+   
+  
+    "description": "",
+   
+  
+    "main": "server.js",
+   
+  
+    "scripts": {
+   
+  
+     
+  
+    "start": "nodemon server.js",
+   
+  
+     
+  
+    "test": "echo \"Error: no test specified\" && exit 1"
+   
+  
+    },
+   
+  
+    "author": "Jesus Catalan",
+   
+  
+    "license": "ISC",
+   
+  
+    "devDependencies": {
+   
+  
+     
+  
+    "nodemon": "^2.0.16"
+   
+  
+    },
+   
+  
+    "dependencies": {
+   
+  
+     
+  
+    "bcryptjs": "^2.4.3",
+   
+  
+     
+  
+    "cors": "^2.8.5",
+   
+  
+     
+  
+    "dotenv": "^16.4.7",
+   
+  
+     
+  
+    "express": "^4.18.1",
+   
+  
+     
+  
+    "mongoose": "^6.13.8"
+   
+  
+    }
+  }
+  
