@@ -50,19 +50,19 @@ const Header = () => {
               <Tab
                 LinkComponent={Link}
                 to="/blogs"
-                label="All Blogs"
+                label="All Posts"
                 sx={{ "&:hover": { color: theme.primary } }}
               />
               <Tab
                 LinkComponent={Link}
                 to="/myBlogs"
-                label="My Blogs"
+                label="My Posts"
                 sx={{ "&:hover": { color: theme.primary } }}
               />
               <Tab
                 LinkComponent={Link}
                 to="/blogs/add"
-                label="Add Blog"
+                label="Add Post"
                 sx={{ "&:hover": { color: theme.primary } }}
               />
             </Tabs>
