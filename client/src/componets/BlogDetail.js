@@ -13,6 +13,7 @@ const labelStyles = {
   color: "#e0e0e0" 
 };
 
+//shows details of the blog
 const BlogDetail = () => {
   const navigate = useNavigate();
   const [blog, setBlog] = useState();

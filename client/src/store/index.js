@@ -1,5 +1,6 @@
 import { combineReducers, configureStore, createSlice } from "@reduxjs/toolkit";
 
+//manages the authentication and theme state
 const authSlice = createSlice({
   name: "auth",
   initialState: { isLoggedIn: false },

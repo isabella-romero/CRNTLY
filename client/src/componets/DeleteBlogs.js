@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import config from "../config";
 
+//delete button to delete the blog
 const DeleteButton = ({ blogId, onDelete }) => {
   const handleDelete = async () => {
     try {

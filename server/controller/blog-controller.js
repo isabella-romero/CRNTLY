@@ -3,6 +3,7 @@ const { findByIdAndRemove } = require("../model/Blog");
 const Blog = require("../model/Blog");
 const User = require("../model/User");
 
+//retrieves all blogs posts and returns them as a response
 const getAllBlogs = async(req,res,next) =>{
     let blogs;
     try{

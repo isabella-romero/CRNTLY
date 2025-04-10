@@ -5,6 +5,8 @@ import config from "../config";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+// build a form to add a blog
+
 const AddBlogs = () => {
   const navigate = useNavigate();
   const [inputs, setInputs] = useState({

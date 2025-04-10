@@ -17,6 +17,8 @@ import {
   import { useStyles } from "./utils";
   import config from "../config";
   
+  //displays the blogs and lets the user edit and delete the blogs
+  
   const Blogs = ({ title, desc, img, user, isUser, id }) => {
     const classes = useStyles();
     const navigate = useNavigate();

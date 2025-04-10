@@ -4,6 +4,7 @@ import Blog from "./Blog";
 import config from "../config";
 import { Box } from "@mui/material";
 
+//retrieves the blogs from the database and displays them
 const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
