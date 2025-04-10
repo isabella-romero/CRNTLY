@@ -1,6 +1,7 @@
 const User = require("../model/User");
 const bcrypt = require("bcryptjs");
 
+//handles all the user related requests
 const getAllUser = async(req,res,next) =>{
     let users;
 
